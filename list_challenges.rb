@@ -122,7 +122,27 @@ end
 # print shift_left([3,4,5,6])
 
 def get_sandwich(string)
-    crust = string.split("bread")
+   
     
 end 
-puts get_sandwich("breadjambread")
+puts get_sandwich("hibreadjamhibread")
+
+def can_balance(string)
+    i = 0 
+    equal = 0
+    string.size.times do
+        newarray = string.first..string[i]
+        newarray2 = string[i]..string.last
+        if newarray.sum == newarray2.sum
+            equal += 1
+        end 
+    end 
+    i += 1
+    if equal > 0
+        return true
+    else 
+        return false
+    end 
+end 
+
+print can_balance ([3,4,6,7])
