@@ -122,15 +122,15 @@ end
 # print shift_left([3,4,5,6])
 
 def get_sandwich(string)
-   
+   outside = string.split("bread")
     
 end 
-puts get_sandwich("hibreadjamhibread")
+# puts get_sandwich("hibreadjamhibread")
 
 def can_balance(string)
     i = 0 
     equal = 0
-    string.size.times do
+    (string.size-1).times do
         newarray = string.first..string[i]
         newarray2 = string[i]..string.last
         if newarray.sum == newarray2.sum
@@ -138,6 +138,7 @@ def can_balance(string)
         end 
     end 
     i += 1
+    print equal
     if equal > 0
         return true
     else 
@@ -145,4 +146,23 @@ def can_balance(string)
     end 
 end 
 
-print can_balance ([3,4,6,7])
+puts can_balance([3,4,6,7,5])
+puts can_balance([1,1,1,1,1])
+puts can_balance([2,2,2,2,2])
+puts can_balance([3,3,4,3,3])
+puts can_balance([1,2,3,1,2])
+
+def merge(list1,list2)
+new_list = list1 + list2
+print new_list
+end 
+
+# print merge([1,2,3],[4,2,8])#[1,2,2,3,4,8]
+
+def max_span(list)
+
+
+end
+
+print max_span([1,2,3,4,1,5,6,1]) #6
+ 
